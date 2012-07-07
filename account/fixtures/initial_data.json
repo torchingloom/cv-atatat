@@ -1,0 +1,50 @@
+
+[
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "administrators"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "moderators"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+      "name": "members"
+    }
+  },
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+          "username": "cittavita-super",
+          "password": "sha1$Hrugh6hcZgyF$84242dd3f5b1df0efc61b5fbe5a8e81f8a52b363",
+          "email": "atlantij@gmail.com",
+          "is_superuser": true,
+          "is_staff": true,
+          "first_name" : "Супер",
+          "last_name" : "Супериор",
+          "groups": [1,2,3]
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+          "username" : "dasha",
+          "password" : "sha1$Hrugh6hcZgyF$84242dd3f5b1df0efc61b5fbe5a8e81f8a52b363",
+          "email" : "pyogaimoscow@gmail.com",
+          "first_name" : "Даша",
+          "last_name" : "Резниченко",
+          "groups": [2]
+      }
+    }
+]

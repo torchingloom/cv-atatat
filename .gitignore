@@ -1,0 +1,9 @@
+.idea
+/build
+public/media
+public/static_root
+*.pyc
+/.pydevproject
+/.project
+.settings/*
+/settings_local.py

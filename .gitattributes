@@ -1,0 +1,8 @@
+# *	text=auto
+*.py   eol=lf
+*.php   eol=lf
+*.html  eol=lf
+*.css   eol=lf
+*.js    eol=lf
+*.ini   eol=lf
+*.phtml eol=lf
