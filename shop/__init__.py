@@ -1,6 +1,7 @@
 
 import os, datetime, hashlib
 
+
 def filename_generate(instance, old_filename, folder=''):
     extension = os.path.splitext(old_filename)[1]
     m = hashlib.md5()
@@ -14,6 +15,3 @@ def item_image_border_filename_generate(instance, old_filename):
 
 def item_image_filename_generate(instance, old_filename):
     return filename_generate(instance, old_filename, 'items')
-
-
-
