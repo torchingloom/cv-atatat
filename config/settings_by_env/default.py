@@ -107,6 +107,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.gzip.GZipMiddleware',
+    'basket.middleware.BasketMiddleware'
 )
 
 ROOT_URLCONF = '%s.urls' % PROJECT_DIR.replace('\\', '/').split('/').pop()
@@ -127,6 +128,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.staticfiles',
+    'basket',
     'registration',
     'south',
     'sorl.thumbnail',

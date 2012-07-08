@@ -15,6 +15,7 @@ urlpatterns += patterns('',
     (r'^accounts/', include('account.urls_registration')),
     (r'^profile/', include('account.urls_profile')),
     (r'^base/', include('base.urls')),
+    (r'^basket/', include('basket.urls'))
 )
 
 urlpatterns += staticfiles_urlpatterns()
