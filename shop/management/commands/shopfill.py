@@ -8,7 +8,8 @@ import random
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        if options.get('verbosity'): self.stdout.write('Set shop item image borders\n')
+        if options.get('verbosity'):
+            self.stdout.write('Set shop item image borders\n')
         folder = 'borders_eta'
         path = os.path.join(MEDIA_ROOT, folder)
         listing = os.listdir(path)
@@ -25,7 +26,8 @@ class Command(BaseCommand):
             border.save()
             borders.append(border)
             if options.get('verbosity') == 2: self.stdout.write(u'%s\n' % border)
-        if options.get('verbosity'): self.stdout.write('Set shop item\n')
+        if options.get('verbosity'):
+            self.stdout.write('Set shop item\n')
         folder_items_eta = 'items_eta'
         listing_items_eta = os.listdir(os.path.join(MEDIA_ROOT, folder_items_eta))
         folder_items_ad_eta = 'items_ad_eta'
@@ -39,7 +41,8 @@ class Command(BaseCommand):
             except :
                 item = models.Item(name=name)
             item.save()
-            if options.get('verbosity') == 2: self.stdout.write(u'%s\n' % item)
+            if options.get('verbosity') == 2:
+                self.stdout.write(u'%s\n' % item)
             for image in models.Item_Image.objects.filter(item=item):
                 image.delete()
                 image = models.Item_Image(
@@ -49,8 +52,9 @@ class Command(BaseCommand):
                     border=random.choice(borders),
                     name=img_name % {'name': u'_основная_', 'item': item}
                 )
-            image.save()
-            if options.get('verbosity') == 3: self.stdout.write(u'    Add Image %s\n' % image)
+                image.save()
+                if options.get('verbosity') == 3:
+                    self.stdout.write(u'    Add Image %s\n' % image)
             for ii in range(2, random.randrange(5, 12)):
                 image = models.Item_Image(
                     item=item,
@@ -60,4 +64,5 @@ class Command(BaseCommand):
                     name=img_name % {'name': ii, 'item': item}
                 )
                 image.save()
-                if options.get('verbosity') == 3: self.stdout.write(u'    Add Image %s\n' % image)
+                if options.get('verbosity') == 3:
+                    self.stdout.write(u'    Add Image %s\n' % image)
