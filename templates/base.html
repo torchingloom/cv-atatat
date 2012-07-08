@@ -1,3 +1,4 @@
+{% load thumbnail %}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -32,403 +33,48 @@
 <div id="main">
 	<div id="container">
 		<div id="logo">Citta Vita</div>
-		
-		<div id="storage">
-			<div class="stack" id="page1">
-				<div class="items">
-					<ul>
-						<li style="margin-left: -5px;">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#page1-abc" rel="abc.php" id="abc">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li class="noborder">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#page1-eee" rel="eee.php" id="eee">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#page1-xxx" rel="ajaxinclude.php" id="xxx">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li style="margin: 0 12px;">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/firefox.jpg" width="300" height="200" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/bigborder.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li class="noborder">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li class="noborder" style="z-index: 1; margin: 0 -12px;">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/firefox.jpg" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-					</ul>
-					
-					<p>1</p>
-				</div>
-				
-				<ins class="palk palk-right"></ins>
-				<ins class="palk palk-left"></ins>
-				<ins class="polk polk-top"></ins>
-				<ins class="polk polk-mid"></ins>
-				<ins class="polk polk-bot"></ins>
-				<ins class="uzel u-top u-left"></ins>
-				<ins class="uzel u-top u-right"></ins>
-				<ins class="uzel u-mid u-left"></ins>
-				<ins class="uzel u-mid u-right"></ins>
-				<ins class="uzel u-bot u-left"></ins>
-				<ins class="uzel u-bot u-right"></ins>
-			</div>
-			
-			<div class="stack" id="page2">
-				<div class="items">
-					<ul>
-						<li class="noborder">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li class="noborder">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li class="noborder">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li style="margin: 0 12px;">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#page2-qqq" rel="qqq.php" id="qqq">
-									<img src="{{ STATIC_URL }}img/firefox.jpg" width="300" height="200" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/bigborder.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-					</ul>
-					
-					<p>2</p>
-				</div>
-				
-				<ins class="palk palk-right"></ins>
-				<ins class="palk palk-left"></ins>
-				<ins class="polk polk-top"></ins>
-				<ins class="polk polk-mid"></ins>
-				<ins class="polk polk-bot"></ins>
-				<ins class="uzel u-top u-left"></ins>
-				<ins class="uzel u-top u-right"></ins>
-				<ins class="uzel u-mid u-left"></ins>
-				<ins class="uzel u-mid u-right"></ins>
-				<ins class="uzel u-bot u-left"></ins>
-				<ins class="uzel u-bot u-right"></ins>
-			</div>
-			
-			<div class="stack" id="page3">
-				<div class="items">
-					<ul>
-						<li class="noborder">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li class="noborder">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li class="noborder">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#" id="">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li style="margin: 0 12px;">
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#page3-qqq" rel="qqq.php" id="qqq">
-									<img src="{{ STATIC_URL }}img/firefox.jpg" width="300" height="200" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/bigborder.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-						<li>
-							<div>
-							<!--[if lt IE 8]><table><td><![endif]-->
-								<a class="openmodalbox_width" href="#page3-xxx" rel="ajaxinclude.php" id="xxx">
-									<img src="{{ STATIC_URL }}img/item.jpg" width="96" height="96" class="item_picture" alt="" />
-									<img src="{{ STATIC_URL }}img/border.png" class="item_border" alt="" />
-								</a>
-							<!--[if lt IE 8]></td></table><![endif]-->
-							</div>
-						</li>
-					</ul>
-					
-					<p>3</p>
-				</div>
-				
-				<ins class="palk palk-right"></ins>
-				<ins class="palk palk-left"></ins>
-				<ins class="polk polk-top"></ins>
-				<ins class="polk polk-mid"></ins>
-				<ins class="polk polk-bot"></ins>
-				<ins class="uzel u-top u-left"></ins>
-				<ins class="uzel u-top u-right"></ins>
-				<ins class="uzel u-mid u-left"></ins>
-				<ins class="uzel u-mid u-right"></ins>
-				<ins class="uzel u-bot u-left"></ins>
-				<ins class="uzel u-bot u-right"></ins>
-			</div>
+        <div id="storage">
+
+{% for shelf in shelfs %}
+
+  			<div class="stack" id="page{{ shelf.num }}">
+  				<div class="items">
+  					<ul>
+
+    {% for item in shelf.items %}
+                        <li{% if item.margin_left %} style="margin-left: {{ item.margin_left }}px"{% endif %}{% if not item.get_image.border %} class="noborder"{% endif %}>
+                            <div>
+                            <!--[if lt IE 8]><table><td><![endif]-->
+                                <a class="openmodalbox_width" href="#page{{ shelf.num }}-item{{ item.pk }}" rel="{%  url item-view item.pk %}" id="item{{ item.pk }}">
+                                    <img src="{{ item.get_front_thumb.url }}" width="{{ item.get_front_thumb.width }}" height="{{ item.get_front_thumb.height }}" class="item_picture" alt="{{ item }}" />
+                                    {% if item.get_image.border %}<img src="{{ item.get_image.border.image.url }}" class="item_border" />{% endif %}
+                                </a>
+                            <!--[if lt IE 8]></td></table><![endif]-->
+                            </div>
+                        </li>
+    {% endfor %}
+
+                        </ul>
+                        <p>{{ shelf.num }}</p>
+                    </div>
+
+                    <ins class="palk palk-right"></ins>
+                    <ins class="palk palk-left"></ins>
+                    <ins class="polk polk-top"></ins>
+                    <ins class="polk polk-mid"></ins>
+                    <ins class="polk polk-bot"></ins>
+                    <ins class="uzel u-top u-left"></ins>
+                    <ins class="uzel u-top u-right"></ins>
+                    <ins class="uzel u-mid u-left"></ins>
+                    <ins class="uzel u-mid u-right"></ins>
+                    <ins class="uzel u-bot u-left"></ins>
+                    <ins class="uzel u-bot u-right"></ins>
+                </div>
+
+{% endfor %}
+
+
 		</div>
-		
 		<a href="#" id="prev" class="nav"></a>
 		<a href="#" id="next" class="nav"></a>
 	</div>

@@ -25,7 +25,7 @@ class Item_Admin(admin.ModelAdmin):
 
     def thumb(self, instance):
         try:
-            image = Item_Image.objects.filter(item=instance)[0]
+            image = instance.get_image()
             return '<img src="%(thumb)s" />' % {'thumb': get_thumbnail(image.image.path, '50x50').url, 'image': image.image.url}
         except Exception:
             return ''

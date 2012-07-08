@@ -2,31 +2,36 @@
 
 from django.core.management.base import BaseCommand, CommandError
 from shop import models
-import os
 from settings import MEDIA_ROOT
-import random
+import os, re, random
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        if options.get('verbosity'):
+        verbosity = int(options.get('verbosity'))
+        if verbosity:
             self.stdout.write('Set shop item image borders\n')
         folder = 'borders_eta'
         path = os.path.join(MEDIA_ROOT, folder)
         listing = os.listdir(path)
         borders = []
         prefix = u'Рамка'
+        i = 1
         for file in listing:
             file = file.split('.')
-            name = "%s %s" % (prefix, file[0])
+            name = "%s %s" % (prefix, i)
             try:
                 border = models.Item_Image_Border.objects.get(name=name)
             except :
                 border = models.Item_Image_Border(name=name)
             border.image = os.path.join(folder, '.'.join(file)).replace('\\', '/')
+            if '__preview' in border.image.url:
+                border.preview_width, border.preview_height = list(re.sub(r'.*__preview(.*?)x(.*?)_.*', '\\1|\\2', border.image.url).split('|'))
             border.save()
             borders.append(border)
-            if options.get('verbosity') == 2: self.stdout.write(u'%s\n' % border)
-        if options.get('verbosity'):
+            i += 1
+            if verbosity > 1:
+                self.stdout.write(u'%s\n' % border)
+        if verbosity:
             self.stdout.write('Set shop item\n')
         folder_items_eta = 'items_eta'
         listing_items_eta = os.listdir(os.path.join(MEDIA_ROOT, folder_items_eta))
@@ -40,29 +45,30 @@ class Command(BaseCommand):
                 item = models.Item.objects.get(name=name)
             except :
                 item = models.Item(name=name)
+            item.margin_left = random.randrange(-2, 5)
             item.save()
-            if options.get('verbosity') == 2:
+            if verbosity > 1:
                 self.stdout.write(u'%s\n' % item)
             for image in models.Item_Image.objects.filter(item=item):
                 image.delete()
-                image = models.Item_Image(
-                    item=item,
-                    is_primary=True,
-                    image=os.path.join(folder_items_eta, random.choice(listing_items_eta)).replace('\\', '/'),
-                    border=random.choice(borders),
-                    name=img_name % {'name': u'_основная_', 'item': item}
-                )
-                image.save()
-                if options.get('verbosity') == 3:
-                    self.stdout.write(u'    Add Image %s\n' % image)
+            image = models.Item_Image(
+                item=item,
+                is_primary=True,
+                image=os.path.join(folder_items_eta, random.choice(listing_items_eta)).replace('\\', '/'),
+                name=img_name % {'name': u'_основная_', 'item': item}
+            )
+            if not 'noborder' in image.image.path:
+                image.border=random.choice(borders)
+            image.save()
+            if verbosity > 2:
+                self.stdout.write(u'    Add Image %s\n' % image)
             for ii in range(2, random.randrange(5, 12)):
                 image = models.Item_Image(
                     item=item,
                     is_primary=False,
                     image=os.path.join(folder_items_ad_eta, random.choice(listing_items_ad)).replace('\\', '/'),
-                    border=random.choice(borders),
                     name=img_name % {'name': ii, 'item': item}
                 )
                 image.save()
-                if options.get('verbosity') == 3:
+                if verbosity > 2:
                     self.stdout.write(u'    Add Image %s\n' % image)

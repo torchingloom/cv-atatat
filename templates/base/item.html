@@ -1,0 +1,61 @@
+<div class="popupinner">
+
+{% if item.item_image_set.all %}
+
+    <div class="item_image">
+
+    {% for img in item.item_image_set.all %}
+
+        <span><img src="{{ img.get_detail_thumb.url }}" alt="" /></span>
+
+    {% endfor %}
+
+    </div>
+
+{% endif %}
+
+	<div class="item_description">
+		<h1>{{ item.name }}</h1>
+
+{% if item.info %}
+
+        <dl><dd class="desc">Фарфоровый дракон принесет немножко чуда и цвета в ваш праздник</dd></dl>
+
+{% endif %}
+
+		<p class="kauf"><a href="#">купить</a></p>
+		
+	</div>
+
+{% if item.item_image_set.all %}
+
+	<div class="item_thumbs">
+		<div class="item_thumbs_wrap">
+			<ul>
+
+    {% for img in item.item_image_set.all %}
+
+                <li><a href="#"><img src="{{ img.get_detail_list_thumb.url }}" alt="" /></a></li>
+
+    {% endfor %}
+
+			</ul>
+		</div>
+
+		<a href="#" class="prev">&larr;</a>
+		<a href="#" class="next">&rarr;</a>
+	</div>
+
+{% endif %}
+
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+	
+	
+	//console.log();
+});
+//]]>
+</script>
