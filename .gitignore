@@ -7,3 +7,4 @@ public/static_root
 /.project
 .settings/*
 /settings_local.py
+_ENVIRONMENT.py
