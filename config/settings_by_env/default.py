@@ -5,7 +5,7 @@ import os
 PROJECT_DIR = os.path.realpath('%s%s' % (__file__, '/../../../'))
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+     ('TA', 'atlantij@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -65,6 +65,7 @@ MEDIA_URL = '/public/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(PUBLIC_ROOT, 'static_root')
+#raise BaseException(STATIC_ROOT)
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -114,6 +115,8 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = '%s.urls' % PROJECT_DIR.replace('\\', '/').split('/').pop()
+
+WSGI_APPLICATION = 'myproject.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
