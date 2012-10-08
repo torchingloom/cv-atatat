@@ -1,4 +1,4 @@
-django
+#django
 south
 django-debug-toolbar
 django-registration
