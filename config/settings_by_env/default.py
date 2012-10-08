@@ -2,7 +2,7 @@
 
 import os
 
-PROJECT_DIR = os.getcwd()
+PROJECT_DIR = os.path.realpath('%s%s' % (__file__, '/../../../'))
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
