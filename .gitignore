@@ -1,6 +1,7 @@
 .idea
 /build
-public/media
+public/media/basket
+public/media/cache
 public/static_root
 *.pyc
 /.pydevproject
