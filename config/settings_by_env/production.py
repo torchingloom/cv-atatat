@@ -1,5 +1,6 @@
 from config.settings_by_env.default import *
 
+WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {

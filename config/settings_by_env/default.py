@@ -116,8 +116,6 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = '%s.urls' % PROJECT_DIR.replace('\\', '/').split('/').pop()
 
-WSGI_APPLICATION = 'myproject.wsgi.application'
-
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
