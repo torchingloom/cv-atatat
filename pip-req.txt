@@ -6,3 +6,4 @@ django-staticfiles
 django-extra-views
 sorl-thumbnail
 django-basket
+django-pickling
