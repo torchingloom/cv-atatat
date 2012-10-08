@@ -225,6 +225,9 @@ THUMBNAIL_ALIASES = {
     },
 }
 
+
+ORDER_STATUSES = (('pending', u'Новый'), ('ok', 'OK'))
+
 try:
     from settings_local import *
 except ImportError:
