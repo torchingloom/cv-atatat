@@ -1,6 +1,6 @@
-﻿# -*- coding: utf-8 -*-
 
 ENVIRONMENT = r'dev'
+
 try:
     from _ENVIRONMENT import ENVIRONMENT
 except ImportError:

@@ -1,4 +1,13 @@
+
 from config.settings_by_env.default import *
+
+#STATIC_ROOT = os.path.join(PUBLIC_ROOT, 'static_root')
+STATIC_ROOT = '/home/atlantij/webapps/cittavita_static'
+#MEDIA_ROOT = '/home/atlantij/webapps/cittavita_static/media'
+MEDIA_URL = '/static/media/'
+
+#raise BaseException(MEDIA_ROOT)
+#raise BaseException(__file__)
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
