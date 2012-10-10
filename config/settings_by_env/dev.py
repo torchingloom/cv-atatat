@@ -3,12 +3,12 @@ from config.settings_by_env.default import *
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = '/tmp/profproject-messages'
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+EMAIL_FILE_PATH = '/tmp/cittavita-messages'
 
-#INSTALLED_APPS = INSTALLED_APPS + ('debug_toolbar', )
+INSTALLED_APPS = INSTALLED_APPS + ('debug_toolbar', )
 
-#MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + ('debug_toolbar.middleware.DebugToolbarMiddleware', )
+MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + ('debug_toolbar.middleware.DebugToolbarMiddleware', )
 
 DEBUG_TOOLBAR_PANELS = (
     'debug_toolbar.panels.version.VersionDebugPanel',
@@ -28,5 +28,3 @@ DEBUG_TOOLBAR_CONFIG = {
     'TAG': 'div',
     'ENABLE_STACKTRACES' : True
 }
-
-

@@ -65,10 +65,7 @@ MEDIA_URL = '/static/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 
-#STATIC_ROOT = '/home/atlantij/webapps/cittavita/myproject/public/static_root'
 STATIC_ROOT = os.path.join(PUBLIC_ROOT, 'static_root')
-#raise BaseException(STATIC_ROOT)
-
 
 
 # URL prefix for static files.
@@ -120,8 +117,6 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = '%s.urls' % PROJECT_DIR.replace('\\', '/').split('/').pop()
 
-WSGI_APPLICATION = 'myproject.wsgi.application'
-
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),
 )
@@ -145,8 +140,8 @@ INSTALLED_APPS = (
     'django_pickling',
     'config',
     'account',
-    'base', # default site app
-    'shop', # resources
+    'base',
+    'shop',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -205,10 +200,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 25
 EMAIL_SUBJECT_PREFIX = ''
-EMAIL_DEFAULT_FROM = 'info@profproect.ru'
+EMAIL_DEFAULT_FROM = 'info@cittavita.ru'
 
 
-LOGIN_REDIRECT_URL = '/base/dashboard'
+LOGIN_REDIRECT_URL = '/'
 
 AUTH_PROFILE_MODULE = 'account.User_Profile'
 AUTHENTICATION_BACKENDS = (
@@ -239,6 +234,3 @@ try:
     from settings_local import *
 except ImportError:
     pass
-
-
-
