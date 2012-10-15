@@ -229,6 +229,7 @@ THUMBNAIL_ALIASES = {
 
 
 ORDER_STATUSES = (('pending', u'Новый'), ('ok', 'OK'))
+PRICE_ATTR = 'price'
 
 try:
     from settings_local import *
