@@ -230,6 +230,8 @@ THUMBNAIL_ALIASES = {
 
 ORDER_STATUSES = (('pending', u'Новый'), ('ok', 'OK'))
 PRICE_ATTR = 'price'
+BASKET_FORM = 'shop.forms.OrderForm'
+BASKET_OPTIONS_USE_KEEP = True
 
 try:
     from settings_local import *
