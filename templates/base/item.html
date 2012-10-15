@@ -16,7 +16,11 @@
 {% endif %}
 
 	<div class="item_description">
-		<h1>{{ object.name }}</h1>
+		<div class="item_neme_and_price">
+			<h1>{{ object.name }}</h1>
+			<h2 class="price">{{ object.price }} рублей</h2>
+			{% if object.price_old and object.price_old != object.price %}<h2 class="price_old">{{ object.price_old }} рублей</h2>{% endif %}
+		</div>
 
 {% if object.info %}
 

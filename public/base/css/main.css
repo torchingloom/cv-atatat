@@ -285,8 +285,17 @@ BODY::before {
 	line-height: 23px;
 	position: relative;
 	overflow: hidden;
-	height: 69px;
-	margin-bottom: 10px;
+}
+.item_description .item_neme_and_price {
+	margin-bottom: 20px;	
+}
+.item_description .price, .item_description .price_old {
+	font-size: 92%;
+	color: orange;
+}
+.item_description .price_old {
+	font-size: 94%;
+	text-decoration: line-through;
 }
 .item_description .size,
 .item_description .size DL,
