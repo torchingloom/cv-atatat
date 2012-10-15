@@ -45,6 +45,8 @@ class Command(BaseCommand):
                 item = models.Item.objects.get(name=name)
             except :
                 item = models.Item(name=name)
+            item.price = random.randrange(50, 1000)
+            item.price_old = random.randrange(item.price, 5000)
             item.margin_left = random.randrange(-2, 5)
             item.save()
             if verbosity > 1:
