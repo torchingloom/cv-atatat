@@ -33,10 +33,11 @@
 
 {% block content %}
 
-{% include 'basket/panel.html' %}
+
 <div id="main">
 	<div id="container">
 		<div id="logo">Citta Vita</div>
+		<div class="basket-panel">{% include 'basket/panel.html' %}</div>
         <div id="storage">
 
 {% for shelf in shelfs %}

@@ -67,6 +67,24 @@ BODY::before {
 	bottom: 0;
 }
 
+
+.basket-panel {
+	position: absolute;
+	top: 42px;
+	left: 552px;
+	width: 390px;
+	z-index: 101;
+	text-align: center;
+	padding: 10px;
+}
+
+.basket-panel, .basket-panel a {
+	color: white;	
+}
+.basket-panel a:HOVER {
+	text-decoration: none;
+}
+
 .stack {
 	position: relative;
 	width: 1000px;
