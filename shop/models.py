@@ -4,6 +4,7 @@ import Image
 from django.db import models
 from sorl.thumbnail.shortcuts import get_thumbnail
 from shop import item_image_border_filename_generate, item_image_filename_generate
+from django.core.urlresolvers import reverse_lazy
 
 class Item(models.Model):
     name = models.CharField(max_length=255, unique=True, db_index=True, verbose_name=u'название товара', help_text=u'Уникальное название товара. Будет фигурировать в ссылке на карточку товара.')
@@ -42,6 +43,9 @@ class Item(models.Model):
         if img:
             return get_thumbnail(img.image.path, '%s' % self.get_width(), format='PNG')
         return None
+    
+    def get_absolute_url(self):
+        return r'/#page1-item%s' % self.pk
 
 
     class Meta:
