@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from distutils.sysconfig import get_python_lib
 
 PROJECT_DIR = os.path.realpath('%s%s' % (__file__, '/../../../'))
 
@@ -22,8 +23,6 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
-
-
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -82,6 +81,7 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
 # Additional locations of static files
 STATICFILES_DIRS = (
     os.path.join(PUBLIC_ROOT, 'base'),
+    os.path.join(get_python_lib(), 'basket', 'media')
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
